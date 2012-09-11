@@ -7,6 +7,8 @@
 //
 
 #import "EDDrawingViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "EDDrink.h"
 
 @interface EDDrawingViewController ()
 {
@@ -73,6 +75,8 @@
     } else if (acceleration.x <= 1.0 && acceleration.x < 0) {
         // slam
         count++;
+        //facebook share
+        [self postOpenGraphAction];
     } else if (acceleration.x <= 1.0 && acceleration.x > 0) {
         // stop drinking
         end = [NSDate new];
@@ -81,6 +85,58 @@
         /// update alcohol level
         
     }
+}
+
+
+- (void)postOpenGraphAction
+{
+    // First create the Open Graph meal object for the meal we ate.
+    id<EDDrink> result = (id<EDDrink>)[FBGraphObject graphObject];
+    
+    // Now create an Open Graph eat action with the meal, our location,
+    // and the people we were with.
+    id<EDDrinkAction> action = (id<EDDrinkAction>)[FBGraphObject graphObject];
+//    action.meal = mealObject;
+//    if (self.selectedPlace) {
+//        action.place = self.selectedPlace;
+//    }
+//    if (self.selectedFriends.count > 0) {
+//        action.tags = self.selectedFriends;
+//    }
+//    if (photoURL) {
+//        NSMutableDictionary *image = [[NSMutableDictionary alloc] init];
+//        [image setObject:photoURL forKey:@"url"];
+//        
+//        NSMutableArray *images = [[NSMutableArray alloc] init];
+//        [images addObject:image];
+//        
+//        action.image = images;
+//    }
+//    
+    // Create the request and post the action to the
+    // "me/<YOUR_APP_NAMESPACE>:eat" path.
+    [FBRequestConnection startForPostWithGraphPath:@"me/edwardhands:drink"
+                                       graphObject:action
+                                 completionHandler:
+     ^(FBRequestConnection *connection, id result, NSError *error) {
+         NSString *alertText;
+         if (!error) {
+             alertText = [NSString stringWithFormat:
+                          @"Posted Open Graph action, id: %@",
+                          [result objectForKey:@"id"]];
+         } else {
+             alertText = [NSString stringWithFormat:
+                          @"error: domain = %@, code = %d",
+                          error.domain, error.code];
+         }
+//         [[[UIAlertView alloc] initWithTitle:@"Result"
+//                                     message:alertText
+//                                    delegate:nil
+//                           cancelButtonTitle:@"Thanks!"
+//                           otherButtonTitles:nil]
+//          show];
+     }
+     ];
 }
 
 

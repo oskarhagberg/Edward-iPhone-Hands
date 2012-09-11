@@ -12,6 +12,7 @@
 		5423BEBD15FF2B9700780E34 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEBA15FF2B9700780E34 /* beer.png */; };
 		5423BEC015FF2C8D00780E34 /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */; };
 		5423BEC315FF2FF900780E34 /* EDBeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423BEC215FF2FF900780E34 /* EDBeerView.m */; };
+		543C754215FF435700240B9F /* EDDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C754115FF435700240B9F /* EDDrink.m */; };
 		544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544321DB15FF2948001F84C4 /* EDDrawingViewController.m */; };
 		75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041C15FF1596008297CE /* UIKit.framework */; };
 		75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
@@ -49,6 +50,9 @@
 		5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = "<group>"; };
 		5423BEC115FF2FF900780E34 /* EDBeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBeerView.h; sourceTree = "<group>"; };
 		5423BEC215FF2FF900780E34 /* EDBeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBeerView.m; sourceTree = "<group>"; };
+		543C753815FF3D7500240B9F /* EDFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDFacebook.h; sourceTree = "<group>"; };
+		543C754015FF435700240B9F /* EDDrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDDrink.h; sourceTree = "<group>"; };
+		543C754115FF435700240B9F /* EDDrink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDDrink.m; sourceTree = "<group>"; };
 		544321DA15FF2948001F84C4 /* EDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDDrawingViewController.h; sourceTree = "<group>"; };
 		544321DB15FF2948001F84C4 /* EDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDDrawingViewController.m; sourceTree = "<group>"; };
 		75B5041815FF1596008297CE /* Edward iPhone Hands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edward iPhone Hands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,11 +152,14 @@
 				75B5043215FF1596008297CE /* EDViewController.m */,
 				544321DA15FF2948001F84C4 /* EDDrawingViewController.h */,
 				544321DB15FF2948001F84C4 /* EDDrawingViewController.m */,
+				543C754015FF435700240B9F /* EDDrink.h */,
+				543C754115FF435700240B9F /* EDDrink.m */,
 				5423BEC115FF2FF900780E34 /* EDBeerView.h */,
 				5423BEC215FF2FF900780E34 /* EDBeerView.m */,
 				75B5042315FF1596008297CE /* Supporting Files */,
 				75B5046015FF1D97008297CE /* EDLoginViewController.h */,
 				75B5046115FF1D97008297CE /* EDLoginViewController.m */,
+				543C753815FF3D7500240B9F /* EDFacebook.h */,
 			);
 			path = "Edward iPhone Hands";
 			sourceTree = "<group>";
@@ -305,6 +312,7 @@
 				75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */,
 				544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */,
 				5423BEC315FF2FF900780E34 /* EDBeerView.m in Sources */,
+				543C754215FF435700240B9F /* EDDrink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
