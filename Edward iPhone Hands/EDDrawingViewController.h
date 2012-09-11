@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDBeerView.h"
 
 @interface EDDrawingViewController : UIViewController <UIAccelerometerDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *beerImageView;
+
+@property (strong, nonatomic) IBOutlet EDBeerView *beerView;
 
 @end

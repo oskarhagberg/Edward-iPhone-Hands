@@ -9,6 +9,13 @@
 #import "EDDrawingViewController.h"
 
 @interface EDDrawingViewController ()
+{
+//    AccelerometerFilter *filter;
+    int count;
+    float fillLevel;
+    NSDate* start;
+    NSDate* end;
+}
 
 @end
 
@@ -40,8 +47,10 @@
 }
 
 - (void)viewDidUnload {
-    [self setBeerImageView:nil];
+    [self setBeerView:nil];
     [super viewDidUnload];
+//    fillLevel = 0;
+//    count = 0;
 }
 
 
@@ -55,6 +64,21 @@
 //		[unfiltered addX:acceleration.x y:acceleration.y z:acceleration.z];
 //		[filtered addX:filter.x y:filter.y z:filter.z];
 //	}
+    
+    if (acceleration.x >= 0.5 && acceleration.x > 0) {
+        // drinking
+        start = [NSDate new];
+    } else if (acceleration.x <= 1.0 && acceleration.x < 0) {
+        // slam
+        count++;
+    } else if (acceleration.x <= 1.0 && acceleration.x > 0) {
+        // stop drinking
+        end = [NSDate new];
+        NSTimeInterval interval = [end timeIntervalSinceNow];
+        _beerView.level = _beerView.level - interval / 5.0;
+        /// update alcohol level
+        
+    }
 }
 
 

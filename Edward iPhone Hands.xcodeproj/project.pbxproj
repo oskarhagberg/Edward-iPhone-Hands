@@ -10,6 +10,8 @@
 		5423BEBB15FF2B9700780E34 /* martini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEB815FF2B9700780E34 /* martini.png */; };
 		5423BEBC15FF2B9700780E34 /* wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEB915FF2B9700780E34 /* wine.png */; };
 		5423BEBD15FF2B9700780E34 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEBA15FF2B9700780E34 /* beer.png */; };
+		5423BEC015FF2C8D00780E34 /* AccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */; };
+		5423BEC315FF2FF900780E34 /* EDBeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5423BEC215FF2FF900780E34 /* EDBeerView.m */; };
 		544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544321DB15FF2948001F84C4 /* EDDrawingViewController.m */; };
 		75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041C15FF1596008297CE /* UIKit.framework */; };
 		75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
@@ -43,6 +45,10 @@
 		5423BEB815FF2B9700780E34 /* martini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = martini.png; sourceTree = "<group>"; };
 		5423BEB915FF2B9700780E34 /* wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine.png; sourceTree = "<group>"; };
 		5423BEBA15FF2B9700780E34 /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		5423BEBE15FF2C8D00780E34 /* AccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerFilter.h; sourceTree = "<group>"; };
+		5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerFilter.m; sourceTree = "<group>"; };
+		5423BEC115FF2FF900780E34 /* EDBeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBeerView.h; sourceTree = "<group>"; };
+		5423BEC215FF2FF900780E34 /* EDBeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBeerView.m; sourceTree = "<group>"; };
 		544321DA15FF2948001F84C4 /* EDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDDrawingViewController.h; sourceTree = "<group>"; };
 		544321DB15FF2948001F84C4 /* EDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDDrawingViewController.m; sourceTree = "<group>"; };
 		75B5041815FF1596008297CE /* Edward iPhone Hands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edward iPhone Hands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,8 @@
 		75B5042215FF1596008297CE /* Edward iPhone Hands */ = {
 			isa = PBXGroup;
 			children = (
+				5423BEBE15FF2C8D00780E34 /* AccelerometerFilter.h */,
+				5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */,
 				5423BEB815FF2B9700780E34 /* martini.png */,
 				5423BEB915FF2B9700780E34 /* wine.png */,
 				5423BEBA15FF2B9700780E34 /* beer.png */,
@@ -140,6 +148,8 @@
 				75B5043215FF1596008297CE /* EDViewController.m */,
 				544321DA15FF2948001F84C4 /* EDDrawingViewController.h */,
 				544321DB15FF2948001F84C4 /* EDDrawingViewController.m */,
+				5423BEC115FF2FF900780E34 /* EDBeerView.h */,
+				5423BEC215FF2FF900780E34 /* EDBeerView.m */,
 				75B5042315FF1596008297CE /* Supporting Files */,
 				75B5046015FF1D97008297CE /* EDLoginViewController.h */,
 				75B5046115FF1D97008297CE /* EDLoginViewController.m */,
@@ -294,6 +304,7 @@
 				75B5043315FF1596008297CE /* EDViewController.m in Sources */,
 				75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */,
 				544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */,
+				5423BEC315FF2FF900780E34 /* EDBeerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B5044815FF1596008297CE /* Edward_iPhone_HandsTests.m in Sources */,
+				5423BEC015FF2C8D00780E34 /* AccelerometerFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
