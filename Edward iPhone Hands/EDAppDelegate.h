@@ -12,4 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// FBSample logic
+// The app delegate is responsible for maintaining the current FBSession. The application requires
+// the user to be logged in to Facebook in order to do anything interesting -- if there is no valid
+// FBSession, a login screen is displayed.
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+
 @end

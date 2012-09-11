@@ -20,6 +20,9 @@
 		75B5043D15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
 		75B5044515FF1596008297CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5044315FF1596008297CE /* InfoPlist.strings */; };
 		75B5044815FF1596008297CE /* Edward_iPhone_HandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5044715FF1596008297CE /* Edward_iPhone_HandsTests.m */; };
+		75B5045915FF1B26008297CE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5045815FF1B26008297CE /* FacebookSDK.framework */; };
+		75B5045B15FF1B5C008297CE /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75B5045A15FF1B5C008297CE /* FacebookSDKResources.bundle */; };
+		75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5046115FF1D97008297CE /* EDLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,10 @@
 		75B5044415FF1596008297CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75B5044615FF1596008297CE /* Edward_iPhone_HandsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Edward_iPhone_HandsTests.h; sourceTree = "<group>"; };
 		75B5044715FF1596008297CE /* Edward_iPhone_HandsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Edward_iPhone_HandsTests.m; sourceTree = "<group>"; };
+		75B5045815FF1B26008297CE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Vendor/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		75B5045A15FF1B5C008297CE /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = Vendor/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		75B5046015FF1D97008297CE /* EDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDLoginViewController.h; sourceTree = "<group>"; };
+		75B5046115FF1D97008297CE /* EDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 				75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */,
 				75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */,
 				75B5042115FF1596008297CE /* CoreGraphics.framework in Frameworks */,
+				75B5045915FF1B26008297CE /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,8 @@
 		75B5041B15FF1596008297CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75B5045A15FF1B5C008297CE /* FacebookSDKResources.bundle */,
+				75B5045815FF1B26008297CE /* FacebookSDK.framework */,
 				75B5041C15FF1596008297CE /* UIKit.framework */,
 				75B5041E15FF1596008297CE /* Foundation.framework */,
 				75B5042015FF1596008297CE /* CoreGraphics.framework */,
@@ -117,6 +127,8 @@
 				75B5043115FF1596008297CE /* EDViewController.h */,
 				75B5043215FF1596008297CE /* EDViewController.m */,
 				75B5042315FF1596008297CE /* Supporting Files */,
+				75B5046015FF1D97008297CE /* EDLoginViewController.h */,
+				75B5046115FF1D97008297CE /* EDLoginViewController.m */,
 			);
 			path = "Edward iPhone Hands";
 			sourceTree = "<group>";
@@ -225,6 +237,7 @@
 			files = (
 				75B5042715FF1596008297CE /* InfoPlist.strings in Resources */,
 				75B5043015FF1596008297CE /* MainStoryboard.storyboard in Resources */,
+				75B5045B15FF1B5C008297CE /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +275,7 @@
 				75B5042915FF1596008297CE /* main.m in Sources */,
 				75B5042D15FF1596008297CE /* EDAppDelegate.m in Sources */,
 				75B5043315FF1596008297CE /* EDViewController.m in Sources */,
+				75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +346,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -351,7 +365,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -361,9 +375,18 @@
 		75B5044C15FF1596008297CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
 				INFOPLIST_FILE = "Edward iPhone Hands/Edward iPhone Hands-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/FacebookSDK/FacebookSDK.framework\"",
+				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -372,9 +395,18 @@
 		75B5044D15FF1596008297CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
 				INFOPLIST_FILE = "Edward iPhone Hands/Edward iPhone Hands-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor/FacebookSDK/FacebookSDK.framework\"",
+				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
