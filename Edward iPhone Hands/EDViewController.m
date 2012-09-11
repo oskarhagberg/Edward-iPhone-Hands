@@ -7,6 +7,7 @@
 //
 
 #import "EDViewController.h"
+#import "EDDrawingViewController.h"
 
 @implementation DrinkCell
 
@@ -26,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    EDDrawingViewController* edvc = [[EDDrawingViewController alloc] init];
+    [self.navigationController presentViewController:edvc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,8 +47,14 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
     return 3;
 }
+
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -71,6 +81,11 @@
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(232, 234);
 }
 
 

@@ -37,6 +37,8 @@
     
     [[UIAccelerometer sharedAccelerometer] setUpdateInterval:1.0 / 60.0];
 	[[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    
+    _beerView.level = 1;
 
 }
 

@@ -16,7 +16,7 @@
 
 @end
 
-@interface EDViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface EDViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewController;
 @end
