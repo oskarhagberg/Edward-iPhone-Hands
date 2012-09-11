@@ -8,15 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrinkCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@interface EDViewController : UIViewController
 
-
-@end
-
-@interface EDViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewController;
 @end

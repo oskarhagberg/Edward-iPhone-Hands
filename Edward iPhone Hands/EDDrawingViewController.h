@@ -11,6 +11,8 @@
 
 @interface EDDrawingViewController : UIViewController <UIAccelerometerDelegate>
 
-@property (strong, nonatomic) IBOutlet EDBeerView *beerView;
+@property (weak, nonatomic) IBOutlet EDBeerView *beerView;
+
+@property (strong, nonatomic) NSString* drink;
 
 @end

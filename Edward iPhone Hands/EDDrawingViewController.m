@@ -9,6 +9,7 @@
 #import "EDDrawingViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "EDDrink.h"
+#import "GraphView.h"
 
 @interface EDDrawingViewController ()
 {
@@ -17,6 +18,7 @@
     float fillLevel;
     NSDate* start;
     NSDate* end;
+    GraphView* graph;
 }
 
 @end
@@ -40,6 +42,8 @@
     [[UIAccelerometer sharedAccelerometer] setUpdateInterval:1.0 / 60.0];
 	[[UIAccelerometer sharedAccelerometer] setDelegate:self];
     
+    graph = [GraphView new];
+    
     _beerView.level = 1;
 
 }
@@ -52,6 +56,7 @@
 
 - (void)viewDidUnload {
     [self setBeerView:nil];
+    [self setBeerView:nil];
     [super viewDidUnload];
 //    fillLevel = 0;
 //    count = 0;
@@ -61,30 +66,35 @@
 // UIAccelerometerDelegate method, called when the device accelerates.
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
-	// Update the accelerometer graph view
-//	if(!isPaused)
-//	{
-//		[filter addAcceleration:acceleration];
-//		[unfiltered addX:acceleration.x y:acceleration.y z:acceleration.z];
-//		[filtered addX:filter.x y:filter.y z:filter.z];
-//	}
-    
-    if (acceleration.x >= 0.5 && acceleration.x > 0) {
-        // drinking
-        start = [NSDate new];
-    } else if (acceleration.x <= 1.0 && acceleration.x < 0) {
-        // slam
-        count++;
-        //facebook share
-        [self postOpenGraphAction];
-    } else if (acceleration.x <= 1.0 && acceleration.x > 0) {
-        // stop drinking
-        end = [NSDate new];
-        NSTimeInterval interval = [end timeIntervalSinceNow];
-        _beerView.level = _beerView.level - interval / 5.0;
-        /// update alcohol level
-        
+    if (end != nil) {
+        return;
     }
+    
+    [graph addX:acceleration.x y:acceleration.y z:acceleration.z];
+    UIAccelerationValue acc = [graph currentX];
+
+    if(acc < -1.0) {
+        //Slam!
+        end = [NSDate new];
+        [self done];
+        return;
+    }
+    
+    if (start == nil) {
+        start = [NSDate new];
+    }
+    
+    acc = MAX(0,acc);
+    if(_beerView.level > 0.1) {
+        _beerView.level -= acc/1000.0;
+    }
+    
+}
+
+- (void)done
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Done!" message:@"Well done" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 

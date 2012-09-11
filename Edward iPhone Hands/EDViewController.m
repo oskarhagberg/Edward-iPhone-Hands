@@ -8,15 +8,13 @@
 
 #import "EDViewController.h"
 #import "EDDrawingViewController.h"
-
-@implementation DrinkCell
-
-
-
-@end
+#import "EDAppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface EDViewController ()
 
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *userProfileImage;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 
 @end
@@ -28,8 +26,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    EDDrawingViewController* edvc = [[EDDrawingViewController alloc] init];
-    [self.navigationController presentViewController:edvc animated:YES completion:nil];
+    self.userProfileImage.pictureCropping = FBProfilePictureCroppingSquare;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(sessionStateChanged:)
+                                                 name:EDSessionStateChangedNotification
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,55 +40,51 @@
 }
 
 - (void)viewDidUnload {
-    [self setCollectionViewController:nil];
+    [self setUserProfileImage:nil];
+    [self setUserNameLabel:nil];
     [super viewDidUnload];
 }
 
-#pragma mark - UICollectionViewDataSource and UICollectionViewDelegate
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (void)viewWillAppear:(BOOL)animated
 {
-    return 1;
-}
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 3;
-}
-
-
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    DrinkCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DrinkCell" forIndexPath:indexPath];
-    if (indexPath.section == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"beer"];
-        cell.textLabel.text = @"Beer";
-    } else if (indexPath.section == 1) {
-        cell.imageView.image = [UIImage imageNamed:@"martini"];
-        cell.textLabel.text = @"Martini";
-    } else if (indexPath.section == 2) {
-        cell.imageView.image = [UIImage imageNamed:@"wine"];
-        cell.textLabel.text = @"Wine";
+    if (FBSession.activeSession.isOpen) {
+        [self populateUserDetails];
     }
-    return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)sessionStateChanged:(NSNotification*)notification {
+    // A more complex app might check the state to see what the appropriate course of
+    // action is, but our needs are simple, so just make sure our idea of the session is
+    // up to date and repopulate the user's name and picture (which will fail if the session
+    // has become invalid).
+    [self populateUserDetails];
+}
+
+- (void)populateUserDetails {
+    if (FBSession.activeSession.isOpen) {
+        [[FBRequest requestForMe] startWithCompletionHandler:
+         ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+             if (!error) {
+                 self.userNameLabel.text = user.name;
+                 self.userProfileImage.profileID = [user objectForKey:@"id"];
+             }
+         }];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    EDDrawingViewController* vc = (EDDrawingViewController*)segue.destinationViewController;
+    if ([@"startBeer" isEqualToString:segue.identifier]) {
+        vc.drink = @"beer";
+    } else if ([@"startWine" isEqualToString:segue.identifier]) {
+        vc.drink = @"wine";
+        
+    } else if ([@"startMartini" isEqualToString:segue.identifier]) {
+        vc.drink = @"martini";
+        
+        
+    }
 }
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(232, 234);
-}
-
-
 
 @end

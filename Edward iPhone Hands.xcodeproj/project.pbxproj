@@ -30,6 +30,9 @@
 		75B5045915FF1B26008297CE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5045815FF1B26008297CE /* FacebookSDK.framework */; };
 		75B5045B15FF1B5C008297CE /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75B5045A15FF1B5C008297CE /* FacebookSDKResources.bundle */; };
 		75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5046115FF1D97008297CE /* EDLoginViewController.m */; };
+		75DE184215FF456100B4CC4A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE184115FF456100B4CC4A /* GraphView.m */; };
+		75DE184315FF457400B4CC4A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DE184115FF456100B4CC4A /* GraphView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		75DE184515FF469000B4CC4A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DE184415FF469000B4CC4A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		75B5045A15FF1B5C008297CE /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = Vendor/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		75B5046015FF1D97008297CE /* EDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDLoginViewController.h; sourceTree = "<group>"; };
 		75B5046115FF1D97008297CE /* EDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDLoginViewController.m; sourceTree = "<group>"; };
+		75DE184015FF456100B4CC4A /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		75DE184115FF456100B4CC4A /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		75DE184415FF469000B4CC4A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DE184515FF469000B4CC4A /* QuartzCore.framework in Frameworks */,
 				75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */,
 				75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */,
 				75B5042115FF1596008297CE /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +115,7 @@
 		75B5040D15FF1596008297CE = {
 			isa = PBXGroup;
 			children = (
+				75DE184415FF469000B4CC4A /* QuartzCore.framework */,
 				75B5042215FF1596008297CE /* Edward iPhone Hands */,
 				75B5044015FF1596008297CE /* Edward iPhone HandsTests */,
 				75B5041B15FF1596008297CE /* Frameworks */,
@@ -140,6 +148,8 @@
 		75B5042215FF1596008297CE /* Edward iPhone Hands */ = {
 			isa = PBXGroup;
 			children = (
+				75DE184015FF456100B4CC4A /* GraphView.h */,
+				75DE184115FF456100B4CC4A /* GraphView.m */,
 				5423BEBE15FF2C8D00780E34 /* AccelerometerFilter.h */,
 				5423BEBF15FF2C8D00780E34 /* AccelerometerFilter.m */,
 				5423BEB815FF2B9700780E34 /* martini.png */,
@@ -313,6 +323,7 @@
 				544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */,
 				5423BEC315FF2FF900780E34 /* EDBeerView.m in Sources */,
 				543C754215FF435700240B9F /* EDDrink.m in Sources */,
+				75DE184315FF457400B4CC4A /* GraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +333,7 @@
 			files = (
 				75B5044815FF1596008297CE /* Edward_iPhone_HandsTests.m in Sources */,
 				5423BEC015FF2C8D00780E34 /* AccelerometerFilter.m in Sources */,
+				75DE184215FF456100B4CC4A /* GraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,21 +23,23 @@
     return self;
 }
 
+- (void)setLevel:(float)level
+{
+    _level = level;
+    NSLog(@"Level %f", _level);
+    [self setNeedsDisplay];
+}
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetLineWidth(context, 2.0);
-    CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:192 green:110 blue:56 alpha:1].CGColor);
+    [[UIColor yellowColor] set];
     float y = 480 * (1 - _level);
     float height = 480 - y;
     CGRect rectangle = CGRectMake(0,y,320,height);
-    CGContextAddRect(context, rectangle);
-    CGContextStrokePath(context);
-    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:192 green:110 blue:56 alpha:1].CGColor);
     CGContextFillRect(context, rectangle);
 }
 
