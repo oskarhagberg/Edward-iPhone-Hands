@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5423BEBB15FF2B9700780E34 /* martini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEB815FF2B9700780E34 /* martini.png */; };
+		5423BEBC15FF2B9700780E34 /* wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEB915FF2B9700780E34 /* wine.png */; };
+		5423BEBD15FF2B9700780E34 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5423BEBA15FF2B9700780E34 /* beer.png */; };
+		544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 544321DB15FF2948001F84C4 /* EDDrawingViewController.m */; };
 		75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041C15FF1596008297CE /* UIKit.framework */; };
 		75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
 		75B5042115FF1596008297CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5042015FF1596008297CE /* CoreGraphics.framework */; };
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5423BEB815FF2B9700780E34 /* martini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = martini.png; sourceTree = "<group>"; };
+		5423BEB915FF2B9700780E34 /* wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wine.png; sourceTree = "<group>"; };
+		5423BEBA15FF2B9700780E34 /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		544321DA15FF2948001F84C4 /* EDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDDrawingViewController.h; sourceTree = "<group>"; };
+		544321DB15FF2948001F84C4 /* EDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDDrawingViewController.m; sourceTree = "<group>"; };
 		75B5041815FF1596008297CE /* Edward iPhone Hands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edward iPhone Hands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B5041C15FF1596008297CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75B5041E15FF1596008297CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,11 +130,16 @@
 		75B5042215FF1596008297CE /* Edward iPhone Hands */ = {
 			isa = PBXGroup;
 			children = (
+				5423BEB815FF2B9700780E34 /* martini.png */,
+				5423BEB915FF2B9700780E34 /* wine.png */,
+				5423BEBA15FF2B9700780E34 /* beer.png */,
 				75B5042B15FF1596008297CE /* EDAppDelegate.h */,
 				75B5042C15FF1596008297CE /* EDAppDelegate.m */,
 				75B5042E15FF1596008297CE /* MainStoryboard.storyboard */,
 				75B5043115FF1596008297CE /* EDViewController.h */,
 				75B5043215FF1596008297CE /* EDViewController.m */,
+				544321DA15FF2948001F84C4 /* EDDrawingViewController.h */,
+				544321DB15FF2948001F84C4 /* EDDrawingViewController.m */,
 				75B5042315FF1596008297CE /* Supporting Files */,
 				75B5046015FF1D97008297CE /* EDLoginViewController.h */,
 				75B5046115FF1D97008297CE /* EDLoginViewController.m */,
@@ -238,6 +252,9 @@
 				75B5042715FF1596008297CE /* InfoPlist.strings in Resources */,
 				75B5043015FF1596008297CE /* MainStoryboard.storyboard in Resources */,
 				75B5045B15FF1B5C008297CE /* FacebookSDKResources.bundle in Resources */,
+				5423BEBB15FF2B9700780E34 /* martini.png in Resources */,
+				5423BEBC15FF2B9700780E34 /* wine.png in Resources */,
+				5423BEBD15FF2B9700780E34 /* beer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +293,7 @@
 				75B5042D15FF1596008297CE /* EDAppDelegate.m in Sources */,
 				75B5043315FF1596008297CE /* EDViewController.m in Sources */,
 				75B5046215FF1D97008297CE /* EDLoginViewController.m in Sources */,
+				544321DC15FF2948001F84C4 /* EDDrawingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +483,7 @@
 				75B5044D15FF1596008297CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75B5044E15FF1596008297CE /* Build configuration list for PBXNativeTarget "Edward iPhone HandsTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +492,7 @@
 				75B5045015FF1596008297CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

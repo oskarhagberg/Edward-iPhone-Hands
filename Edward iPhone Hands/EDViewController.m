@@ -16,6 +16,8 @@
 
 @interface EDViewController ()
 
+
+
 @end
 
 @implementation EDViewController
@@ -41,13 +43,24 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
+    return 3;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    DrinkCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DrinkCell" forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        cell.imageView.image = [UIImage imageNamed:@"beer"];
+        cell.textLabel.text = @"Beer";
+    } else if (indexPath.section == 1) {
+        cell.imageView.image = [UIImage imageNamed:@"martini"];
+        cell.textLabel.text = @"Martini";
+    } else if (indexPath.section == 2) {
+        cell.imageView.image = [UIImage imageNamed:@"wine"];
+        cell.textLabel.text = @"Wine";
+    }
+    return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
