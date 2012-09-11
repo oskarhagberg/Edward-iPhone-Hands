@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041C15FF1596008297CE /* UIKit.framework */; };
+		75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
+		75B5042115FF1596008297CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5042015FF1596008297CE /* CoreGraphics.framework */; };
+		75B5042715FF1596008297CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5042515FF1596008297CE /* InfoPlist.strings */; };
+		75B5042915FF1596008297CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5042815FF1596008297CE /* main.m */; };
+		75B5042D15FF1596008297CE /* EDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5042C15FF1596008297CE /* EDAppDelegate.m */; };
+		75B5043015FF1596008297CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B5042E15FF1596008297CE /* MainStoryboard.storyboard */; };
+		75B5043315FF1596008297CE /* EDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5043215FF1596008297CE /* EDViewController.m */; };
+		75B5043B15FF1596008297CE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5043A15FF1596008297CE /* SenTestingKit.framework */; };
+		75B5043C15FF1596008297CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041C15FF1596008297CE /* UIKit.framework */; };
+		75B5043D15FF1596008297CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B5041E15FF1596008297CE /* Foundation.framework */; };
+		75B5044515FF1596008297CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75B5044315FF1596008297CE /* InfoPlist.strings */; };
+		75B5044815FF1596008297CE /* Edward_iPhone_HandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5044715FF1596008297CE /* Edward_iPhone_HandsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75B5043E15FF1596008297CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75B5040F15FF1596008297CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75B5041715FF1596008297CE;
+			remoteInfo = "Edward iPhone Hands";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75B5041815FF1596008297CE /* Edward iPhone Hands.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edward iPhone Hands.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75B5041C15FF1596008297CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75B5041E15FF1596008297CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75B5042015FF1596008297CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75B5042415FF1596008297CE /* Edward iPhone Hands-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edward iPhone Hands-Info.plist"; sourceTree = "<group>"; };
+		75B5042615FF1596008297CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75B5042815FF1596008297CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75B5042A15FF1596008297CE /* Edward iPhone Hands-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Edward iPhone Hands-Prefix.pch"; sourceTree = "<group>"; };
+		75B5042B15FF1596008297CE /* EDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDAppDelegate.h; sourceTree = "<group>"; };
+		75B5042C15FF1596008297CE /* EDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDAppDelegate.m; sourceTree = "<group>"; };
+		75B5042F15FF1596008297CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		75B5043115FF1596008297CE /* EDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDViewController.h; sourceTree = "<group>"; };
+		75B5043215FF1596008297CE /* EDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDViewController.m; sourceTree = "<group>"; };
+		75B5043915FF1596008297CE /* Edward iPhone HandsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Edward iPhone HandsTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75B5043A15FF1596008297CE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		75B5044215FF1596008297CE /* Edward iPhone HandsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edward iPhone HandsTests-Info.plist"; sourceTree = "<group>"; };
+		75B5044415FF1596008297CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75B5044615FF1596008297CE /* Edward_iPhone_HandsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Edward_iPhone_HandsTests.h; sourceTree = "<group>"; };
+		75B5044715FF1596008297CE /* Edward_iPhone_HandsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Edward_iPhone_HandsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75B5041515FF1596008297CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5041D15FF1596008297CE /* UIKit.framework in Frameworks */,
+				75B5041F15FF1596008297CE /* Foundation.framework in Frameworks */,
+				75B5042115FF1596008297CE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75B5043515FF1596008297CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5043B15FF1596008297CE /* SenTestingKit.framework in Frameworks */,
+				75B5043C15FF1596008297CE /* UIKit.framework in Frameworks */,
+				75B5043D15FF1596008297CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75B5040D15FF1596008297CE = {
+			isa = PBXGroup;
+			children = (
+				75B5042215FF1596008297CE /* Edward iPhone Hands */,
+				75B5044015FF1596008297CE /* Edward iPhone HandsTests */,
+				75B5041B15FF1596008297CE /* Frameworks */,
+				75B5041915FF1596008297CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75B5041915FF1596008297CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75B5041815FF1596008297CE /* Edward iPhone Hands.app */,
+				75B5043915FF1596008297CE /* Edward iPhone HandsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75B5041B15FF1596008297CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75B5041C15FF1596008297CE /* UIKit.framework */,
+				75B5041E15FF1596008297CE /* Foundation.framework */,
+				75B5042015FF1596008297CE /* CoreGraphics.framework */,
+				75B5043A15FF1596008297CE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75B5042215FF1596008297CE /* Edward iPhone Hands */ = {
+			isa = PBXGroup;
+			children = (
+				75B5042B15FF1596008297CE /* EDAppDelegate.h */,
+				75B5042C15FF1596008297CE /* EDAppDelegate.m */,
+				75B5042E15FF1596008297CE /* MainStoryboard.storyboard */,
+				75B5043115FF1596008297CE /* EDViewController.h */,
+				75B5043215FF1596008297CE /* EDViewController.m */,
+				75B5042315FF1596008297CE /* Supporting Files */,
+			);
+			path = "Edward iPhone Hands";
+			sourceTree = "<group>";
+		};
+		75B5042315FF1596008297CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75B5042415FF1596008297CE /* Edward iPhone Hands-Info.plist */,
+				75B5042515FF1596008297CE /* InfoPlist.strings */,
+				75B5042815FF1596008297CE /* main.m */,
+				75B5042A15FF1596008297CE /* Edward iPhone Hands-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75B5044015FF1596008297CE /* Edward iPhone HandsTests */ = {
+			isa = PBXGroup;
+			children = (
+				75B5044615FF1596008297CE /* Edward_iPhone_HandsTests.h */,
+				75B5044715FF1596008297CE /* Edward_iPhone_HandsTests.m */,
+				75B5044115FF1596008297CE /* Supporting Files */,
+			);
+			path = "Edward iPhone HandsTests";
+			sourceTree = "<group>";
+		};
+		75B5044115FF1596008297CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75B5044215FF1596008297CE /* Edward iPhone HandsTests-Info.plist */,
+				75B5044315FF1596008297CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75B5041715FF1596008297CE /* Edward iPhone Hands */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75B5044B15FF1596008297CE /* Build configuration list for PBXNativeTarget "Edward iPhone Hands" */;
+			buildPhases = (
+				75B5041415FF1596008297CE /* Sources */,
+				75B5041515FF1596008297CE /* Frameworks */,
+				75B5041615FF1596008297CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Edward iPhone Hands";
+			productName = "Edward iPhone Hands";
+			productReference = 75B5041815FF1596008297CE /* Edward iPhone Hands.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75B5043815FF1596008297CE /* Edward iPhone HandsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75B5044E15FF1596008297CE /* Build configuration list for PBXNativeTarget "Edward iPhone HandsTests" */;
+			buildPhases = (
+				75B5043415FF1596008297CE /* Sources */,
+				75B5043515FF1596008297CE /* Frameworks */,
+				75B5043615FF1596008297CE /* Resources */,
+				75B5043715FF1596008297CE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75B5043F15FF1596008297CE /* PBXTargetDependency */,
+			);
+			name = "Edward iPhone HandsTests";
+			productName = "Edward iPhone HandsTests";
+			productReference = 75B5043915FF1596008297CE /* Edward iPhone HandsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75B5040F15FF1596008297CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ED;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = TaiwanYo;
+			};
+			buildConfigurationList = 75B5041215FF1596008297CE /* Build configuration list for PBXProject "Edward iPhone Hands" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75B5040D15FF1596008297CE;
+			productRefGroup = 75B5041915FF1596008297CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75B5041715FF1596008297CE /* Edward iPhone Hands */,
+				75B5043815FF1596008297CE /* Edward iPhone HandsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75B5041615FF1596008297CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5042715FF1596008297CE /* InfoPlist.strings in Resources */,
+				75B5043015FF1596008297CE /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75B5043615FF1596008297CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5044515FF1596008297CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75B5043715FF1596008297CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75B5041415FF1596008297CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5042915FF1596008297CE /* main.m in Sources */,
+				75B5042D15FF1596008297CE /* EDAppDelegate.m in Sources */,
+				75B5043315FF1596008297CE /* EDViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75B5043415FF1596008297CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75B5044815FF1596008297CE /* Edward_iPhone_HandsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75B5043F15FF1596008297CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75B5041715FF1596008297CE /* Edward iPhone Hands */;
+			targetProxy = 75B5043E15FF1596008297CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75B5042515FF1596008297CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75B5042615FF1596008297CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75B5042E15FF1596008297CE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75B5042F15FF1596008297CE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		75B5044315FF1596008297CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75B5044415FF1596008297CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75B5044915FF1596008297CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		75B5044A15FF1596008297CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75B5044C15FF1596008297CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
+				INFOPLIST_FILE = "Edward iPhone Hands/Edward iPhone Hands-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75B5044D15FF1596008297CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
+				INFOPLIST_FILE = "Edward iPhone Hands/Edward iPhone Hands-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		75B5044F15FF1596008297CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Edward iPhone Hands.app/Edward iPhone Hands";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
+				INFOPLIST_FILE = "Edward iPhone HandsTests/Edward iPhone HandsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		75B5045015FF1596008297CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Edward iPhone Hands.app/Edward iPhone Hands";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Edward iPhone Hands/Edward iPhone Hands-Prefix.pch";
+				INFOPLIST_FILE = "Edward iPhone HandsTests/Edward iPhone HandsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75B5041215FF1596008297CE /* Build configuration list for PBXProject "Edward iPhone Hands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75B5044915FF1596008297CE /* Debug */,
+				75B5044A15FF1596008297CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75B5044B15FF1596008297CE /* Build configuration list for PBXNativeTarget "Edward iPhone Hands" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75B5044C15FF1596008297CE /* Debug */,
+				75B5044D15FF1596008297CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		75B5044E15FF1596008297CE /* Build configuration list for PBXNativeTarget "Edward iPhone HandsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75B5044F15FF1596008297CE /* Debug */,
+				75B5045015FF1596008297CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75B5040F15FF1596008297CE /* Project object */;
+}
